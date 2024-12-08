@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
     <canvas id="animation-canvas"></canvas>
-    <main>
-        {{ content }}
-    </main>
-    <script src="{{ '/assets/js/animation.js' | relative_url }}"></script>
+    <div class="background-overlay"></div>
+    <div class="content-overlay">
+        <!-- Ihr Content hier -->
+         Christopher Keibel
+    </div>
+    <script src="assets/js/animation.js"></script>
 </body>
 </html>
