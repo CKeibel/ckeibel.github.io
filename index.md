@@ -20,6 +20,7 @@ title: Home
             <a href="https://linkedin.com/in/{{ site.social.linkedin }}" target="_blank">LinkedIn</a>
             {% endif %}
         </div>
+        <div class="scroll-indicator" onclick="scrollToContent()">↓</div>
     </div>
 </section>
 
