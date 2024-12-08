@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.scss' | relative_url }}">
+    {% include head.html %}
 </head>
 <body>
-    <canvas id="animation-canvas"></canvas>
-    <div class="background-overlay"></div>
-    <div class="content-overlay">
-        <!-- Ihr Content hier -->
-         Christopher Keibel
-    </div>
-    <script src="assets/js/animation.js"></script>
+    {% include nav.html %}
+    {{ content }}
+    {% include footer.html %}
+    <script src="{{ '/assets/js/animation.js' | relative_url }}"></script>
 </body>
 </html>
