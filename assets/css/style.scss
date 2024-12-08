@@ -124,7 +124,7 @@ body {
     transform: translateX(-50%);
     font-size: 2rem;
     color: white;
-    animation: bounce 2s infinite;
+    animation: bounce 2s ease infinite;
     cursor: pointer;
     
     &:hover {
@@ -134,12 +134,12 @@ body {
 
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
-        transform: translateX(-50%) translateY(0);
+        transform: translate(-50%, 0);
     }
     40% {
-        transform: translateX(-50%) translateY(-30px);
+        transform: translate(-50%, -30px);
     }
     60% {
-        transform: translateX(-50%) translateY(-15px);
+        transform: translate(-50%, -15px);
     }
 }
