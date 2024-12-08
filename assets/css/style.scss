@@ -1,0 +1,118 @@
+---
+---
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #1a1a1a;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.site-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background: rgba(26, 26, 26, 0.9);
+    padding: 1rem;
+    text-align: center;
+    
+    a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+        
+        &:hover, &.active {
+            opacity: 1;
+        }
+    }
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+#animation-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(26, 26, 26, 0.7);
+    z-index: 1;
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.page-content {
+    position: relative;
+    z-index: 3;
+    background: #1a1a1a;
+    min-height: 100vh;
+    padding: 6rem 2rem 4rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section {
+    position: relative;
+    z-index: 3;
+    background: #1a1a1a;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    
+    h2 {
+        margin-bottom: 2rem;
+    }
+    
+    p {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    overflow: hidden;
+    border: 3px solid rgba(0, 255, 221, 0.5);
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
