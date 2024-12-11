@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const NETWORK_COLOR = '#00ffdd';
     const nodes = [];
-    const maxNodes = 200;
+    const maxNodes = 100;
     let time = 0;
 
     class Node {
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
 
             if (Math.random() < 0.0005) {
-                this.flashIntensity = 1;
+                this.flashIntensity = 3;
             }
         }
 
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     this.x, this.y, this.size * (1 + this.flashIntensity * 30)
                 );
                 gradient.addColorStop(0, `rgba(255, 255, 255, ${this.flashIntensity})`);
-                gradient.addColorStop(0.4, `rgba(0, 255, 221, ${this.flashIntensity * 0.5})`);
+                gradient.addColorStop(0.4, `rgba(0, 255, 221, ${this.flashIntensity * 1.5})`);
                 gradient.addColorStop(1, 'rgba(0, 255, 221, 0)');
                 ctx.fillStyle = gradient;
                 ctx.fill();
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function drawConnections() {
-        const maxDistance = 250;
+        const maxDistance = 150;
         
         for (let i = 0; i < nodes.length; i++) {
             for (let j = i + 1; j < nodes.length; j++) {
@@ -82,10 +82,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     ctx.lineTo(nodes[j].x, nodes[j].y);
                     
                     const combinedFlash = nodes[i].flashIntensity + nodes[j].flashIntensity;
-                    const flashOpacity = opacity + (combinedFlash * 0.3);
+                    const flashOpacity = opacity + (combinedFlash * 0.1);
                     
                     ctx.strokeStyle = `rgba(0, 255, 221, ${flashOpacity})`;
-                    ctx.lineWidth = 0.5;
+                    ctx.lineWidth = 1.5;
                     ctx.stroke();
                 }
             }
