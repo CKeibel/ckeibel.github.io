@@ -1,0 +1,50 @@
+<div id="particles-js" class="fullscreen">
+    <div class="jumbotron text-center">
+      {% if site.photo %}
+      <img class="particles-photo" src="{{ site.photo }}" />
+      {% endif %}
+      <h1 class="particles-title">{{ site.title }}</h1>
+      <h1 class="particles-subtitle">{{ site.taglong }}</h1>
+      <div class="nowrap">
+        {% if site.profile.facebook %}
+        <a class="particles-icon" href="{{ site.profile.facebook }}">{% include svg/facebook.svg %}</a>
+        {% endif %}
+        {% if site.profile.x %}
+        <a class="particles-icon" href="{{ site.profile.x }}">{% include svg/x.svg %}</a>
+        {% endif %}
+        {% if site.profile.mastodon %}
+        <a class="particles-icon" rel="me" href="{{ site.profile.mastodon }}">{% include svg/mastodon.svg %}</a>
+        {% endif %}
+        {% if site.profile.bluesky %}
+        <a class="particles-icon" href="{{ site.profile.bluesky }}">{% include svg/bluesky.svg %}</a>
+        {% endif %}
+        {% if site.profile.instagram %}      
+        <a class="particles-icon" href="{{ site.profile.instagram }}">{% include svg/instagram.svg %}</a>
+        {% endif %}
+        {% if site.profile.linkedin %}
+        <a class="particles-icon" href="{{ site.profile.linkedin }}">{% include svg/linkedin.svg %}</a>
+        {% endif %}
+        {% if site.profile.xing %}
+        <a class="particles-icon" href="{{ site.profile.xing }}">{% include svg/xing.svg %}</a>
+        {% endif %}
+        {% if site.profile.stackoverflow %}
+        <a class="particles-icon" href="{{ site.profile.stackoverflow }}">{% include svg/stackoverflow.svg %}</a>
+        {% endif %}
+        {% if site.profile.medium %}
+        <a class="particles-icon" href="{{ site.profile.medium }}">{% include svg/medium.svg %}</a>
+        {% endif %}
+        {% if site.profile.github %}
+        <a class="particles-icon" href="{{ site.profile.github }}">{% include svg/github.svg %}</a>
+        {% endif %}
+        {% if site.author.email %}
+        <a class="particles-icon" href="mailto:{{ site.author.email }}">{% include svg/mail.svg %}</a>
+        {% endif %}
+        {% if site.profile.cv != false %}
+        <a class="particles-icon" href="cv">{% include svg/cv-circled.svg %}</a>
+        {% endif %}
+      </div>
+    </div>
+    <div class="particles-scroll">
+      <a class="particles-icon" href="#scroll">{% include svg/nav-arrow-down.svg %}</a>
+    </div>
+  </div>
